@@ -8,9 +8,9 @@
   },
   "architecture": {
     "64bit": {
+      "url": "https://github.com/graent/grclean/releases/download/v2.3.1/GrClean-2.3.1-setup.exe",
+      "hash": "7a6dada5f57b941e116f3863a1b91b36250be6b0d9e08026b7007b8b0f460f33",
       "installer": {
-        "url": "https://github.com/graent/grclean/releases/download/v2.3.1/GrClean-2.3.1-setup.exe",
-        "hash": "7a6dada5f57b941e116f3863a1b91b36250be6b0d9e08026b7007b8b0f460f33",
         "args": [
           "/S",
           "/D=$dir"
@@ -32,9 +32,7 @@
   "autoupdate": {
     "architecture": {
       "64bit": {
-        "installer": {
-          "url": "https://github.com/graent/grclean/releases/download/v$version/GrClean-$version-setup.exe"
-        }
+        "url": "https://github.com/graent/grclean/releases/download/v$version/GrClean-$version-setup.exe"
       }
     },
     "hash": {
