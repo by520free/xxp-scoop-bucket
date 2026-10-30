@@ -1,0 +1,45 @@
+{
+  "version": "2.3.1",
+  "description": "轻量、安全、无广告的 Windows 清理与优化工具：垃圾清理、微信/QQ/企业微信深度清理、大文件与重复文件分析、启动项管理、注册表清理、磁盘/驱动管理、系统优化、数据迁移等。Electron 桌面应用（仅 Windows x64）。",
+  "homepage": "https://github.com/graent/grclean",
+  "license": {
+    "identifier": "Proprietary",
+    "url": "https://github.com/graent/grclean#license"
+  },
+  "architecture": {
+    "64bit": {
+      "installer": {
+        "url": "https://github.com/graent/grclean/releases/download/v2.3.1/GrClean-2.3.1-setup.exe",
+        "hash": "7a6dada5f57b941e116f3863a1b91b36250be6b0d9e08026b7007b8b0f460f33",
+        "args": [
+          "/S",
+          "/D=$dir"
+        ]
+      }
+    }
+  },
+  "bin": "GrClean.exe",
+  "shortcuts": [
+    [
+      "GrClean.exe",
+      "GrClean"
+    ]
+  ],
+  "pre_uninstall": "if (Test-Path \"$dir\\Uninstall GrClean.exe\") { Start-Process -Wait \"$dir\\Uninstall GrClean.exe\" -ArgumentList '/S' }",
+  "checkver": {
+    "github": "https://github.com/graent/grclean"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "installer": {
+          "url": "https://github.com/graent/grclean/releases/download/v$version/GrClean-$version-setup.exe"
+        }
+      }
+    },
+    "hash": {
+      "url": "https://github.com/graent/grclean/releases/expanded_assets/v$version",
+      "find": "GrClean-$version-setup\\.exe[\\s\\S]*?sha256:([0-9a-f]{64})"
+    }
+  }
+}
