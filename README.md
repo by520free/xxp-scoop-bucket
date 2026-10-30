@@ -1,13 +1,12 @@
-# my-scoop-bucket
+# xxp-scoop-bucket
 
 个人维护的 Scoop 软件桶（bucket）。
 
 ## 安装
 
 ```powershell
-# 把 YOUR_USERNAME 换成你的 GitHub 用户名
-scoop bucket add my-scoop-bucket https://github.com/YOUR_USERNAME/my-scoop-bucket
-scoop install my-scoop-bucket/grclean
+scoop bucket add xxp-scoop-bucket https://github.com/by520free/xxp-scoop-bucket
+scoop install xxp-scoop-bucket/grclean
 ```
 
 ## 包含的软件
