@@ -1,0 +1,42 @@
+{
+  "version": "1.0.58",
+  "description": "为 Windows 打造的现代文件管理器：多标签/多窗格、全盘索引与拼音搜索、空格快速预览、暂存盘与可自定义外观。C++/Win32 原生应用（仅 Windows x64）。",
+  "homepage": "https://github.com/jimmgreen/pulse",
+  "license": "Apache-2.0",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/jimmgreen/pulse/releases/download/v1.0.58/PulseSetup-1.0.58.exe",
+      "hash": "a2dee2348b610bb3dc4882fe80ea8dd94dcef73bb6ca2e7808585ad932ccbe6c",
+      "installer": {
+        "args": [
+          "/VERYSILENT",
+          "/SUPPRESSMSGBOXES",
+          "/SP-",
+          "/DIR=$dir",
+          "/TASKS="
+        ]
+      }
+    }
+  },
+  "bin": "pulse.exe",
+  "shortcuts": [
+    [
+      "pulse.exe",
+      "Pulse"
+    ]
+  ],
+  "checkver": {
+    "github": "https://github.com/jimmgreen/pulse"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/jimmgreen/pulse/releases/download/v$version/PulseSetup-$version.exe"
+      }
+    },
+    "hash": {
+      "url": "https://github.com/jimmgreen/pulse/releases/expanded_assets/v$version",
+      "find": "PulseSetup-$version\\.exe[\\s\\S]*?sha256:([0-9a-f]{64})"
+    }
+  }
+}
