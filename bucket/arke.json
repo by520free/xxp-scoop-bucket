@@ -1,0 +1,41 @@
+{
+  "version": "0.6.2",
+  "description": "不卡顿的 Windows 文件管理器：Rust + GPUI 编写，GPU 渲染，单文件便携版，带实时预览与全文搜索。",
+  "homepage": "https://github.com/Koimsurai/Arke",
+  "license": "AGPL-3.0-only",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/Koimsurai/Arke/releases/download/v0.6.2/arke-0.6.2.exe#/arke.exe",
+      "hash": "1ebb6bc9897f9fd6770b9016a6d62e93879d237b9207a6bd374a8d04c4b73783"
+    },
+    "arm64": {
+      "url": "https://github.com/Koimsurai/Arke/releases/download/v0.6.2/arke-0.6.2-arm64.exe#/arke.exe",
+      "hash": "503f49b31009830836fc27ada3049b9e76e13943bd05e1be056cfe76e092f8b4"
+    }
+  },
+  "bin": "arke.exe",
+  "shortcuts": [
+    [
+      "arke.exe",
+      "Arke"
+    ]
+  ],
+  "notes": "设置存放在 %APPDATA%\\Arke。Arke 检测到由 Scoop 安装后会自行关闭内置更新，请用 scoop update arke 升级。可选的实时更新后台服务需在 设置 > 搜索 中手动开启（需管理员权限）。作者另有官方 bucket：scoop bucket add arke https://github.com/Koimsurai/scoop-bucket。",
+  "checkver": "github",
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/Koimsurai/Arke/releases/download/v$version/arke-$version.exe#/arke.exe",
+        "hash": {
+          "url": "https://github.com/Koimsurai/Arke/releases/download/v$version/arke-$version.exe.sha256"
+        }
+      },
+      "arm64": {
+        "url": "https://github.com/Koimsurai/Arke/releases/download/v$version/arke-$version-arm64.exe#/arke.exe",
+        "hash": {
+          "url": "https://github.com/Koimsurai/Arke/releases/download/v$version/arke-$version-arm64.exe.sha256"
+        }
+      }
+    }
+  }
+}
