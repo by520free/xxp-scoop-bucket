@@ -2,3 +2,6 @@
 *.tmp
 .DS_Store
 .Thumbs.db
+
+# 本地工作记忆，不进公开 bucket
+.workbuddy/
