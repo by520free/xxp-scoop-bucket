@@ -9,7 +9,7 @@
             "hash": "784314423a5f4723415d7ca08799d3700399a8e3f9d8d026b18a5b15cdfeccf5"
         }
     },
-    "extract_dir": "Kiri",
+    "extract_dir": "LocalApp\\Kiri",
     "bin": "bin\\kiri.exe",
     "shortcuts": [
         [
