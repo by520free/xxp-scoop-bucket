@@ -1,0 +1,35 @@
+{
+    "version": "0.2.1",
+    "description": "A tiny, fast container runtime for Windows (via WSL2) — a lightweight Docker Desktop alternative that speaks the Docker Engine API",
+    "homepage": "https://runkiri.com",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/libracoder/kiri/releases/download/v0.2.1/Kiri-0.2.1-x86_64.msi",
+            "hash": "784314423a5f4723415d7ca08799d3700399a8e3f9d8d026b18a5b15cdfeccf5"
+        }
+    },
+    "extract_dir": "Kiri",
+    "bin": "bin\\kiri.exe",
+    "shortcuts": [
+        [
+            "kiri-win.exe",
+            "Kiri"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/libracoder/kiri"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/libracoder/kiri/releases/download/v$version/Kiri-$version-x86_64.msi"
+            }
+        }
+    },
+    "notes": [
+        "Requires WSL2 on Windows 10/11. First launch runs Kiri's own setup (imports the WSL2 engine, creates the 'kiri' docker context, adds the CLI to your per-user PATH) and may prompt for elevation to install WSL or DNS rules.",
+        "Kiri has a built-in self-updater. Consider turning automatic updates off in Kiri's Settings and use 'scoop update kiri' instead, so versions stay consistent.",
+        "scoop uninstall removes the extracted files but cannot undo Kiri's WSL distro, docker context, PATH entries or registry keys. Use Kiri's own 'kiri.ps1 -Uninstall -IfSetUp' first if you want a full cleanup."
+    ]
+}
